@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 const images = [
   {
     id: 1,
-    src: "../public/1.jpeg",
+    src: "../public/5.jpeg",
     alt: "Entrepreneur working",
   },
   {
