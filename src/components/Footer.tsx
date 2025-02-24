@@ -37,14 +37,15 @@ const Footer = () => {
               <a href="https://www.linkedin.com/in/viacheslav-mamatov-61169032b/" className="hover:text-pink-400 transition-colors">
                 <Instagram className="w-6 h-6" />
               </a>
-              <a href="mail:vimawebsolutions@gmail.com" className="hover:text-blue-400 transition-colors">
+              <a href="mailto:vimawebsolutions@gmail.com" className="hover:text-blue-400 transition-colors">
                 <Mail className="w-6 h-6" />
               </a>
               <a href="tel:+905356765899" className="hover:text-blue-400 transition-colors">
-              <WhatsApp className="w-6 h-6" />
+                <Phone className="w-6 h-6" />
               </a>
             </div>
           </motion.div>
+        </div>
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
