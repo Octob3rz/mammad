@@ -17,14 +17,6 @@ const Footer = () => {
           >
             <h4 className="text-2xl font-playfair font-semibold mb-6">Get in Touch</h4>
             <div className="flex items-center space-x-3">
-              <Mail className="w-5 h-5 text-gray-400" />
-              <span>viacheslavmamatov@example.com</span>
-            </div>
-            <div className="flex items-center space-x-3">
-              <Phone className="w-5 h-5 text-gray-400" />
-              <span>+905356765899</span>
-            </div>
-            <div className="flex items-center space-x-3">
               <MapPin className="w-5 h-5 text-gray-400" />
               <span>Istanbul, Turkey</span>
             </div>
@@ -44,6 +36,12 @@ const Footer = () => {
               </a>
               <a href="https://www.linkedin.com/in/viacheslav-mamatov-61169032b/" className="hover:text-pink-400 transition-colors">
                 <Instagram className="w-6 h-6" />
+              </a>
+              <a href="mail:vimawebsolutions@gmail.com" className="hover:text-blue-400 transition-colors">
+                <Mail className="w-6 h-6" />
+              </a>
+              <a href="tel:+905356765899" className="hover:text-blue-400 transition-colors">
+              <WhatsApp className="w-6 h-6" />
               </a>
             </div>
           </motion.div>
