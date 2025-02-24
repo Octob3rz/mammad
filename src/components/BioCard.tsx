@@ -14,8 +14,8 @@ const BioCard = ({ title, content }: BioCardProps) => {
       animate={{ opacity: 1, y: 0 }}
       className="p-6 rounded-2xl backdrop-blur-lg bg-white/80 shadow-lg"
     >
-      <h3 className="text-2xl font-semibold mb-4">{title}</h3>
-      <p className="text-gray-600 leading-relaxed">{content}</p>
+      <h3 className="text-2xl font-playfair font-semibold mb-4 text-gray-800">{title}</h3>
+      <p className="text-gray-600 leading-relaxed font-sans">{content}</p>
     </motion.div>
   );
 };
