@@ -45,23 +45,6 @@ const Footer = () => {
               </a>
             </div>
           </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="space-y-4 md:col-span-2"
-          >
-            <h4 className="text-2xl font-playfair font-semibold mb-6">About</h4>
-            <p className="text-gray-400 leading-relaxed">
-              With years of experience in entrepreneurship and business development, 
-              I bring a wealth of knowledge and expertise to help businesses thrive 
-              in today's competitive landscape.
-            </p>
-          </motion.div>
-        </div>
-        
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
