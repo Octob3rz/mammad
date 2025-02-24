@@ -8,30 +8,30 @@ import { motion } from "framer-motion";
 const images = [
   {
     id: 1,
-    src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
+    src: "../public/1.jpeg",
     alt: "Entrepreneur working",
   },
   {
     id: 2,
-    src: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952",
+    src: "../public/2.jpeg",
     alt: "Professional portrait",
   },
   {
     id: 3,
-    src: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+    src: "../public/3.jpeg",
     alt: "Working on laptop",
   },
   {
     id: 4,
-    src: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e",
+    src: "../public/4.jpeg",
     alt: "Tech innovation",
   },
 ];
 
 const achievements = [
-  { number: "10+", text: "Years Experience" },
-  { number: "50+", text: "Successful Projects" },
-  { number: "30M+", text: "Revenue Generated" },
+  { number: "15+", text: "Years Experience" },
+  { number: "5+", text: "Successful Projects" },
+  { number: "1M+", text: "Revenue Generated" },
   { number: "100+", text: "Happy Clients" },
 ];
 
@@ -44,11 +44,12 @@ const Index = () => {
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           <BioCard
             title="About Me"
-            content="As a visionary entrepreneur with over a decade of experience, I've dedicated my career to pushing the boundaries of innovation and creating meaningful impact through technology."
+            content="Being born in Azerbaijan i cultivated dedication to my work in all aspects since i was born. In my 30s i've been thriving as a director of meet factory and later decided to open an own restaurant in the center of Baku. After that i've been living in Dubai and providing my professional guidance as a real estate agent to many influencial people. There i acquired extremely large circle of contacts that allow me to connect people from different places and unite them for one goal: develop and thrive together. 
+As a visionary entrepreneur with over a decade of experience, I've dedicated my career to pushing the boundaries of entrepreneurship and creating meaningful impact through interactions with people."
           />
           <BioCard
             title="My Vision"
-            content="I believe in harnessing the power of technology to solve real-world problems and create solutions that make a difference in people's lives."
+            content="I believe in harnessing the power of social communication to solve real-world problems and create solutions that make a difference in people's lives."
           />
         </div>
         
@@ -88,16 +89,16 @@ const Index = () => {
           <h2 className="text-3xl font-bold text-center mb-12">Areas of Expertise</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="p-6 bg-white rounded-2xl shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Business Strategy</h3>
+              <h3 className="text-xl font-semibold mb-4">BUSINESS STRATEGY</h3>
               <p className="text-gray-600">Developing comprehensive business strategies that drive growth and innovation.</p>
             </div>
             <div className="p-6 bg-white rounded-2xl shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Technology Leadership</h3>
-              <p className="text-gray-600">Guiding teams through digital transformation and technological advancement.</p>
+              <h3 className="text-xl font-semibold mb-4">LEADERSHIP</h3>
+              <p className="text-gray-600">Guiding teams through physical transformations and communicational advancement.</p>
             </div>
             <div className="p-6 bg-white rounded-2xl shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Innovation Management</h3>
-              <p className="text-gray-600">Fostering a culture of innovation and implementing cutting-edge solutions.</p>
+              <h3 className="text-xl font-semibold mb-4">MANAGEMENT</h3>
+              <p className="text-gray-600">Fostering a culture of innovation and implementing cutting-edge solutions in various industries.</p>
             </div>
           </div>
         </motion.div>
