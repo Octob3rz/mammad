@@ -3,6 +3,7 @@ import React from "react";
 import Hero from "../components/Hero";
 import MasonryGrid from "../components/MasonryGrid";
 import BioCard from "../components/BioCard";
+import Footer from "../components/Footer";
 import { motion } from "framer-motion";
 
 const images = [
@@ -37,7 +38,7 @@ const achievements = [
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
       <Hero />
       
       <section className="max-w-7xl mx-auto py-16 px-4">
@@ -70,7 +71,7 @@ As a visionary entrepreneur with over a decade of experience, I've dedicated my 
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="text-center"
+              className="text-center p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
             >
               <h3 className="text-4xl font-bold text-gray-800 mb-2">{item.number}</h3>
               <p className="text-gray-600">{item.text}</p>
@@ -88,21 +89,23 @@ As a visionary entrepreneur with over a decade of experience, I've dedicated my 
         >
           <h2 className="text-3xl font-playfair font-bold text-center mb-12">Areas of Expertise</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="p-6 bg-white rounded-2xl shadow-lg">
+            <div className="p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
               <h3 className="text-xl font-semibold mb-4">BUSINESS STRATEGY</h3>
               <p className="text-gray-600">Developing comprehensive business strategies that drive growth and innovation.</p>
             </div>
-            <div className="p-6 bg-white rounded-2xl shadow-lg">
+            <div className="p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
               <h3 className="text-xl font-semibold mb-4">LEADERSHIP</h3>
               <p className="text-gray-600">Guiding teams through physical transformations and communicational advancement.</p>
             </div>
-            <div className="p-6 bg-white rounded-2xl shadow-lg">
+            <div className="p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
               <h3 className="text-xl font-semibold mb-4">MANAGEMENT</h3>
               <p className="text-gray-600">Fostering a culture of innovation and implementing cutting-edge solutions in various industries.</p>
             </div>
           </div>
         </motion.div>
       </section>
+      
+      <Footer />
     </div>
   );
 };
