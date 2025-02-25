@@ -71,10 +71,10 @@ As a visionary entrepreneur with over a decade of experience, I've dedicated my 
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="text-center p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
+              className="text-center p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-[#D4AF37]/20 hover:border-[#D4AF37]/40"
             >
-              <h3 className="text-4xl font-bold text-gray-800 mb-2">{item.number}</h3>
-              <p className="text-gray-600">{item.text}</p>
+              <h3 className="text-4xl font-bold text-[#8A898C] mb-2">{item.number}</h3>
+              <p className="text-[#555555]">{item.text}</p>
             </motion.div>
           ))}
         </motion.div>
@@ -87,19 +87,19 @@ As a visionary entrepreneur with over a decade of experience, I've dedicated my 
           viewport={{ once: true }}
           className="py-20"
         >
-          <h2 className="text-3xl font-playfair font-bold text-center mb-12">Areas of Expertise</h2>
+          <h2 className="text-3xl font-playfair font-bold text-center mb-12 text-[#221F26]">Areas of Expertise</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-              <h3 className="text-xl font-semibold mb-4">BUSINESS STRATEGY</h3>
-              <p className="text-gray-600">Developing comprehensive business strategies that drive growth and innovation.</p>
+            <div className="p-8 bg-gradient-to-b from-white to-gray-50 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgba(212,175,55,0.1)] transition-all duration-300 transform hover:-translate-y-1 border border-[#D4AF37]/10">
+              <h3 className="text-xl font-semibold mb-4 text-[#8E9196]">BUSINESS STRATEGY</h3>
+              <p className="text-[#555555]">Developing comprehensive business strategies that drive growth and innovation.</p>
             </div>
-            <div className="p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-              <h3 className="text-xl font-semibold mb-4">LEADERSHIP</h3>
-              <p className="text-gray-600">Guiding teams through physical transformations and communicational advancement.</p>
+            <div className="p-8 bg-gradient-to-b from-white to-gray-50 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgba(212,175,55,0.1)] transition-all duration-300 transform hover:-translate-y-1 border border-[#D4AF37]/10">
+              <h3 className="text-xl font-semibold mb-4 text-[#8E9196]">LEADERSHIP</h3>
+              <p className="text-[#555555]">Guiding teams through physical transformations and communicational advancement.</p>
             </div>
-            <div className="p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-              <h3 className="text-xl font-semibold mb-4">MANAGEMENT</h3>
-              <p className="text-gray-600">Fostering a culture of innovation and implementing cutting-edge solutions in various industries.</p>
+            <div className="p-8 bg-gradient-to-b from-white to-gray-50 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgba(212,175,55,0.1)] transition-all duration-300 transform hover:-translate-y-1 border border-[#D4AF37]/10">
+              <h3 className="text-xl font-semibold mb-4 text-[#8E9196]">MANAGEMENT</h3>
+              <p className="text-[#555555]">Fostering a culture of innovation and implementing cutting-edge solutions in various industries.</p>
             </div>
           </div>
         </motion.div>
