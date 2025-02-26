@@ -1,3 +1,4 @@
+
 import React from "react";
 import Hero from "../components/Hero";
 import MasonryGrid from "../components/MasonryGrid";
@@ -8,18 +9,13 @@ import { motion } from "framer-motion";
 const images = [
   {
     id: 1,
-    src: "/2.jpeg",
-    alt: "Professional portrait",
+    src: "/4.jpeg",
+    alt: "Tech innovation",
   },
   {
     id: 2,
     src: "/3.jpeg",
     alt: "Working on laptop",
-  },
-  {
-    id: 3,
-    src: "/4.jpeg",
-    alt: "Tech innovation",
   },
 ];
 
@@ -78,7 +74,7 @@ As a visionary entrepreneur with over a decade of experience, I've dedicated my 
           ))}
         </motion.div>
 
-        {/* Areas of Expertise */}
+        {/* Professional Journey Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -86,19 +82,40 @@ As a visionary entrepreneur with over a decade of experience, I've dedicated my 
           viewport={{ once: true }}
           className="py-20"
         >
-          <h2 className="text-3xl font-playfair font-bold text-center mb-12 text-[#221F26]">Areas of Expertise</h2>
+          <h2 className="text-3xl font-playfair font-bold text-center mb-12 text-[#221F26]">Professional Journey</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="p-8 bg-gradient-to-b from-white to-gray-50 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgba(212,175,55,0.1)] transition-all duration-300 transform hover:-translate-y-1 border border-[#D4AF37]/10">
-              <h3 className="text-xl font-playfair font-semibold mb-4 text-[#8E9196]">BUSINESS STRATEGY</h3>
-              <p className="font-lora text-[#555555] leading-relaxed tracking-wide">Developing comprehensive business strategies that drive growth and innovation.</p>
+              <h3 className="text-xl font-playfair font-semibold mb-4 text-[#8E9196]">MEAT FACTORY DIRECTOR</h3>
+              <p className="font-lora text-[#555555] leading-relaxed tracking-wide">Leading operations and innovation in the meat processing industry, establishing efficient production systems and quality control measures.</p>
             </div>
             <div className="p-8 bg-gradient-to-b from-white to-gray-50 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgba(212,175,55,0.1)] transition-all duration-300 transform hover:-translate-y-1 border border-[#D4AF37]/10">
-              <h3 className="text-xl font-playfair font-semibold mb-4 text-[#8E9196]">LEADERSHIP</h3>
-              <p className="font-lora text-[#555555] leading-relaxed tracking-wide">Guiding teams through physical transformations and communicational advancement.</p>
+              <h3 className="text-xl font-playfair font-semibold mb-4 text-[#8E9196]">RESTAURANT OWNER</h3>
+              <p className="font-lora text-[#555555] leading-relaxed tracking-wide">Successfully established and managed a restaurant in central Baku, creating exceptional dining experiences and building a strong customer base.</p>
             </div>
             <div className="p-8 bg-gradient-to-b from-white to-gray-50 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgba(212,175,55,0.1)] transition-all duration-300 transform hover:-translate-y-1 border border-[#D4AF37]/10">
-              <h3 className="text-xl font-playfair font-semibold mb-4 text-[#8E9196]">MANAGEMENT</h3>
-              <p className="font-lora text-[#555555] leading-relaxed tracking-wide">Fostering a culture of innovation and implementing cutting-edge solutions in various industries.</p>
+              <h3 className="text-xl font-playfair font-semibold mb-4 text-[#8E9196]">REAL ESTATE CONSULTANT</h3>
+              <p className="font-lora text-[#555555] leading-relaxed tracking-wide">Providing expert guidance in Dubai's real estate market, connecting influential clients with premium properties and investment opportunities.</p>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Global Network Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="py-20"
+        >
+          <h2 className="text-3xl font-playfair font-bold text-center mb-12 text-[#221F26]">Global Network</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="p-8 bg-gradient-to-b from-white to-gray-50 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgba(212,175,55,0.1)] transition-all duration-300 transform hover:-translate-y-1 border border-[#D4AF37]/10">
+              <h3 className="text-xl font-playfair font-semibold mb-4 text-[#8E9196]">INTERNATIONAL CONNECTIONS</h3>
+              <p className="font-lora text-[#555555] leading-relaxed tracking-wide">Built an extensive network spanning Azerbaijan, Dubai, and beyond, facilitating meaningful connections and business opportunities across borders.</p>
+            </div>
+            <div className="p-8 bg-gradient-to-b from-white to-gray-50 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgba(212,175,55,0.1)] transition-all duration-300 transform hover:-translate-y-1 border border-[#D4AF37]/10">
+              <h3 className="text-xl font-playfair font-semibold mb-4 text-[#8E9196]">COLLABORATIVE GROWTH</h3>
+              <p className="font-lora text-[#555555] leading-relaxed tracking-wide">Uniting diverse professionals and businesses toward shared goals of development and success through strategic partnerships and innovative solutions.</p>
             </div>
           </div>
         </motion.div>
