@@ -20,7 +20,7 @@ const Hero = () => {
         transition={{ duration: 0.8 }}
         className="relative text-center text-white px-4"
       >
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">MAMMAT MAMATOV</h1>
+        <h1 className="text-4xl md:text-6xl font-bold mb-4">MAMMAD MAMATOV</h1>
         <h3 className="text-xl md:text-2xl max-w-2xl mx-auto">Innovator. Entrepreneur. Visionary.
         </h3>
       </motion.div>
