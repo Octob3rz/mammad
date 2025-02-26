@@ -42,15 +42,20 @@ const Index = () => {
       <Hero />
       
       <section className="max-w-7xl mx-auto py-16 px-4">
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="space-y-24">
           <BioCard
             title="About Me"
             content="Being born in Azerbaijan i cultivated dedication to my work in all aspects since i was born. In my 30s i've been thriving as a director of meet factory and later decided to open an own restaurant in the center of Baku. After that i've been living in Dubai and providing my professional guidance as a real estate agent to many influencial people. There i acquired extremely large circle of contacts that allow me to connect people from different places and unite them for one goal: develop and thrive together. 
 As a visionary entrepreneur with over a decade of experience, I've dedicated my career to pushing the boundaries of entrepreneurship and creating meaningful impact through interactions with people."
+            imageSrc="../public/5.jpeg"
+            imagePosition="right"
           />
+          
           <BioCard
             title="My Vision"
             content="I believe in harnessing the power of social communication to solve real-world problems and create solutions that make a difference in people's lives."
+            imageSrc="../public/2.jpeg"
+            imagePosition="left"
           />
         </div>
         
