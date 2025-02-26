@@ -1,4 +1,3 @@
-
 import React from "react";
 import Hero from "../components/Hero";
 import MasonryGrid from "../components/MasonryGrid";
@@ -9,22 +8,17 @@ import { motion } from "framer-motion";
 const images = [
   {
     id: 1,
-    src: "../public/5.jpeg",
-    alt: "Entrepreneur working",
-  },
-  {
-    id: 2,
-    src: "../public/2.jpeg",
+    src: "/2.jpeg",
     alt: "Professional portrait",
   },
   {
-    id: 3,
-    src: "../public/3.jpeg",
+    id: 2,
+    src: "/3.jpeg",
     alt: "Working on laptop",
   },
   {
-    id: 4,
-    src: "../public/4.jpeg",
+    id: 3,
+    src: "/4.jpeg",
     alt: "Tech innovation",
   },
 ];
@@ -47,14 +41,14 @@ const Index = () => {
             title="About Me"
             content="Being born in Azerbaijan i cultivated dedication to my work in all aspects since i was born. In my 30s i've been thriving as a director of meet factory and later decided to open an own restaurant in the center of Baku. After that i've been living in Dubai and providing my professional guidance as a real estate agent to many influencial people. There i acquired extremely large circle of contacts that allow me to connect people from different places and unite them for one goal: develop and thrive together. 
 As a visionary entrepreneur with over a decade of experience, I've dedicated my career to pushing the boundaries of entrepreneurship and creating meaningful impact through interactions with people."
-            imageSrc="../public/5.jpeg"
+            imageSrc="/5.jpeg"
             imagePosition="right"
           />
           
           <BioCard
             title="My Vision"
             content="I believe in harnessing the power of social communication to solve real-world problems and create solutions that make a difference in people's lives."
-            imageSrc="../public/2.jpeg"
+            imageSrc="/2.jpeg"
             imagePosition="left"
           />
         </div>

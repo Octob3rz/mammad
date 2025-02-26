@@ -7,7 +7,7 @@ const Hero = () => {
     <div className="relative h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
         <img
-          src="../public/1.jpeg"
+          src="/1.jpeg"
           alt="Hero"
           className="w-full h-full object-cover"
         />
