@@ -66,10 +66,10 @@ As a visionary entrepreneur with over a decade of experience, I've dedicated my 
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="text-center p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-[#D4AF37]/20 hover:border-[#D4AF37]/40"
+              className="text-center p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-violet-deep/20 hover:border-violet-bright/40 glow-violet"
             >
-              <h3 className="text-4xl font-playfair font-bold text-[#8A898C] mb-2">{item.number}</h3>
-              <p className="font-montserrat text-[#555555]">{item.text}</p>
+              <h3 className="text-4xl font-playfair font-bold text-violet-deep mb-2">{item.number}</h3>
+              <p className="font-montserrat text-violet-bright/80">{item.text}</p>
             </motion.div>
           ))}
         </motion.div>
@@ -82,19 +82,19 @@ As a visionary entrepreneur with over a decade of experience, I've dedicated my 
           viewport={{ once: true }}
           className="py-20"
         >
-          <h2 className="text-3xl font-playfair font-bold text-center mb-12 text-[#221F26]">Professional Journey</h2>
+          <h2 className="text-3xl font-playfair font-bold text-center mb-12 text-violet-deep text-shadow-violet">Professional Journey</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="p-8 bg-gradient-to-b from-white to-gray-50 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgba(212,175,55,0.1)] transition-all duration-300 transform hover:-translate-y-1 border border-[#D4AF37]/10">
-              <h3 className="text-xl font-playfair font-semibold mb-4 text-[#8E9196]">MEAT FACTORY DIRECTOR</h3>
-              <p className="font-lora text-[#555555] leading-relaxed tracking-wide">Leading operations and innovation in the meat processing industry, establishing efficient production systems and quality control measures.</p>
+            <div className="p-8 gradient-violet rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgba(212,175,55,0.1)] transition-all duration-300 transform hover:-translate-y-1">
+              <h3 className="text-xl font-playfair font-semibold mb-4 text-white">MEAT FACTORY DIRECTOR</h3>
+              <p className="font-lora text-white/90 leading-relaxed tracking-wide">Leading operations and innovation in the meat processing industry, establishing efficient production systems and quality control measures.</p>
             </div>
-            <div className="p-8 bg-gradient-to-b from-white to-gray-50 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgba(212,175,55,0.1)] transition-all duration-300 transform hover:-translate-y-1 border border-[#D4AF37]/10">
-              <h3 className="text-xl font-playfair font-semibold mb-4 text-[#8E9196]">RESTAURANT OWNER</h3>
-              <p className="font-lora text-[#555555] leading-relaxed tracking-wide">Successfully established and managed a restaurant in central Baku, creating exceptional dining experiences and building a strong customer base.</p>
+            <div className="p-8 gradient-lime rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgba(212,175,55,0.1)] transition-all duration-300 transform hover:-translate-y-1">
+              <h3 className="text-xl font-playfair font-semibold mb-4 text-violet-deep">RESTAURANT OWNER</h3>
+              <p className="font-lora text-violet-deep/90 leading-relaxed tracking-wide">Successfully established and managed a restaurant in central Baku, creating exceptional dining experiences and building a strong customer base.</p>
             </div>
-            <div className="p-8 bg-gradient-to-b from-white to-gray-50 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgba(212,175,55,0.1)] transition-all duration-300 transform hover:-translate-y-1 border border-[#D4AF37]/10">
-              <h3 className="text-xl font-playfair font-semibold mb-4 text-[#8E9196]">REAL ESTATE CONSULTANT</h3>
-              <p className="font-lora text-[#555555] leading-relaxed tracking-wide">Providing expert guidance in Dubai's real estate market, connecting influential clients with premium properties and investment opportunities.</p>
+            <div className="p-8 gradient-violet rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgba(212,175,55,0.1)] transition-all duration-300 transform hover:-translate-y-1">
+              <h3 className="text-xl font-playfair font-semibold mb-4 text-white">REAL ESTATE CONSULTANT</h3>
+              <p className="font-lora text-white/90 leading-relaxed tracking-wide">Providing expert guidance in Dubai's real estate market, connecting influential clients with premium properties and investment opportunities.</p>
             </div>
           </div>
         </motion.div>
@@ -107,15 +107,15 @@ As a visionary entrepreneur with over a decade of experience, I've dedicated my 
           viewport={{ once: true }}
           className="py-20"
         >
-          <h2 className="text-3xl font-playfair font-bold text-center mb-12 text-[#221F26]">Global Network</h2>
+          <h2 className="text-3xl font-playfair font-bold text-center mb-12 text-violet-deep text-shadow-violet">Global Network</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="p-8 bg-gradient-to-b from-white to-gray-50 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgba(212,175,55,0.1)] transition-all duration-300 transform hover:-translate-y-1 border border-[#D4AF37]/10">
-              <h3 className="text-xl font-playfair font-semibold mb-4 text-[#8E9196]">INTERNATIONAL CONNECTIONS</h3>
-              <p className="font-lora text-[#555555] leading-relaxed tracking-wide">Built an extensive network spanning Azerbaijan, Dubai, and beyond, facilitating meaningful connections and business opportunities across borders.</p>
+            <div className="p-8 bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgba(212,175,55,0.1)] transition-all duration-300 transform hover:-translate-y-1 border-2 border-lime-bright glow-lime">
+              <h3 className="text-xl font-playfair font-semibold mb-4 text-violet-deep">INTERNATIONAL CONNECTIONS</h3>
+              <p className="font-lora text-violet-bright/80 leading-relaxed tracking-wide">Built an extensive network spanning Azerbaijan, Dubai, and beyond, facilitating meaningful connections and business opportunities across borders.</p>
             </div>
-            <div className="p-8 bg-gradient-to-b from-white to-gray-50 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgba(212,175,55,0.1)] transition-all duration-300 transform hover:-translate-y-1 border border-[#D4AF37]/10">
-              <h3 className="text-xl font-playfair font-semibold mb-4 text-[#8E9196]">COLLABORATIVE GROWTH</h3>
-              <p className="font-lora text-[#555555] leading-relaxed tracking-wide">Uniting diverse professionals and businesses toward shared goals of development and success through strategic partnerships and innovative solutions.</p>
+            <div className="p-8 bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgba(212,175,55,0.1)] transition-all duration-300 transform hover:-translate-y-1 border-2 border-violet-bright glow-violet">
+              <h3 className="text-xl font-playfair font-semibold mb-4 text-violet-deep">COLLABORATIVE GROWTH</h3>
+              <p className="font-lora text-violet-bright/80 leading-relaxed tracking-wide">Uniting diverse professionals and businesses toward shared goals of development and success through strategic partnerships and innovative solutions.</p>
             </div>
           </div>
         </motion.div>
