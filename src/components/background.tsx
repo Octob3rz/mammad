@@ -9,15 +9,49 @@ export default function Background() {
 
   // Effect to create an initial pattern of visible cells
   useEffect(() => {
-    // Create an initial set of visible cells (about 5% of the grid)
+    // Create an initial set of visible cells (about 50% of the grid)
     const initialCells: number[] = []
     const totalCells = Math.floor((window.innerWidth * window.innerHeight) / (32 * 32))
-    const visibleCount = Math.floor(totalCells * 0.02)
+    const visibleCount = Math.floor(totalCells * 0.5) // Increase to 50% coverage
     
-    for (let i = 0; i < visibleCount; i++) {
-      const randomCell = Math.floor(Math.random() * totalCells)
-      initialCells.push(randomCell)
-    }
+    // Create mathematically connected patterns
+    // Start with some seed points
+    const seedPoints = [
+      Math.floor(Math.random() * totalCells),
+      Math.floor(Math.random() * totalCells),
+      Math.floor(Math.random() * totalCells)
+    ]
+    
+    const gridCols = Math.ceil(window.innerWidth / 32)
+    const processedCells = new Set<number>()
+    
+    // Generate cellular automaton-like pattern
+    seedPoints.forEach(seed => {
+      let frontier = [seed]
+      processedCells.add(seed)
+      initialCells.push(seed)
+      
+      // Generate a connected pattern from each seed
+      while (frontier.length > 0 && initialCells.length < visibleCount) {
+        const current = frontier.shift()!
+        const neighbors = [
+          current - gridCols - 1, current - gridCols, current - gridCols + 1,
+          current - 1, current + 1,
+          current + gridCols - 1, current + gridCols, current + gridCols + 1
+        ].filter(n => n >= 0 && n < totalCells)
+        
+        for (const neighbor of neighbors) {
+          if (!processedCells.has(neighbor) && Math.random() > 0.35) { // Higher probability to create connections
+            processedCells.add(neighbor)
+            initialCells.push(neighbor)
+            frontier.push(neighbor)
+            
+            // Limit the growth to avoid overprocessing
+            if (initialCells.length >= visibleCount) break
+          }
+        }
+      }
+    })
     
     setVisibleCells(initialCells)
   }, [])
@@ -74,7 +108,16 @@ interface CellProps {
 }
 
 function Cell({ index, isActive, isHovered, onHover }: CellProps) {
-  const getRandomColor = () => COLORS[Math.floor(Math.random() * COLORS.length)]
+  const getRandomColor = () => {
+    // Use more pastel/less vivid versions of the colors
+    const pastelColors = [
+      'hsl(267, 35%, 70%)', // Soft violet
+      'hsl(267, 25%, 60%)', // Muted violet
+      'hsl(84, 30%, 75%)',  // Soft lime
+      'hsl(84, 20%, 65%)'   // Muted lime
+    ]
+    return pastelColors[Math.floor(Math.random() * pastelColors.length)]
+  }
   const [color] = useState(getRandomColor())
 
   return (
@@ -82,12 +125,12 @@ function Cell({ index, isActive, isHovered, onHover }: CellProps) {
       onMouseEnter={() => onHover(index)}
       className="transition-all duration-500 ease-in-out"
       style={{
-        background: isActive || isHovered ? `${color}10` : 'transparent',
+        background: isActive || isHovered ? `${color}20` : 'transparent', // More subtle background
         border: isActive || isHovered 
           ? `solid 1px ${color}` 
           : 'solid 0px transparent',
-        opacity: isActive ? 0.8 : isHovered ? 1 : 0,
-        transform: isHovered ? 'scale(1.1)' : 'scale(1)',
+        opacity: isActive ? 0.6 : isHovered ? 0.8 : 0, // Reduced opacity for less vividness
+        transform: isHovered ? 'scale(1.05)' : 'scale(1)', // Less dramatic scale for subtlety
       }}
     />
   )

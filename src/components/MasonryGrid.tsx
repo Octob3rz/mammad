@@ -25,7 +25,7 @@ const MasonryGrid = ({ images }: MasonryGridProps) => {
             delay: index * 0.2,
             ease: "easeOut"
           }}
-          className="break-inside-avoid mb-6"
+          className="break-inside-avoid mb-24" // Increased vertical spacing between images from mb-6 to mb-24
         >
           <div className="relative group overflow-hidden rounded-2xl">
             <img
