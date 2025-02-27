@@ -8,16 +8,19 @@ import Footer from "../components/Footer";
 import { motion } from "framer-motion";
 import { User, Award, Rocket, Building, Globe, Handshake } from "lucide-react";
 
+// We'll use the images in the comprehensive masonry grid below
 const images = [
   {
     id: 1,
     src: "/4.jpeg",
     alt: "Tech innovation",
+    description: "Embracing technological innovation to create meaningful solutions."
   },
   {
     id: 2,
     src: "/3.jpeg",
     alt: "Working on laptop",
+    description: "Dedicated to excellence in every project and initiative."
   },
 ];
 
@@ -71,8 +74,6 @@ As a visionary entrepreneur with over a decade of experience, I've dedicated my 
             imagePosition="left"
           />
         </div>
-        
-        <MasonryGrid images={images} />
 
         {/* Achievements Section */}
         <motion.div
@@ -104,57 +105,145 @@ As a visionary entrepreneur with over a decade of experience, I've dedicated my 
           </div>
         </motion.div>
 
-        {/* Professional Journey Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="py-20"
-        >
-          <div className="flex justify-center mb-10">
-            <Building size={48} className="text-violet-deep" strokeWidth={2.5} />
+        {/* Comprehensive Masonry Grid with Images and Text */}
+        <div className="py-20">
+          {/* Title for the masonry section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="mb-16 text-center"
+          >
+            <h2 className="text-3xl font-playfair font-bold text-violet-deep text-shadow-violet">My Journey in Pictures</h2>
+            <p className="mt-4 text-violet-bright/80 max-w-2xl mx-auto font-lora">Visual highlights from my professional experience and global connections</p>
+          </motion.div>
+          
+          {/* Masonry grid with mixed content */}
+          <div className="columns-1 sm:columns-2 lg:columns-3 gap-8 space-y-8">
+            {/* First image */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="break-inside-avoid mb-8"
+            >
+              <div className="relative group overflow-hidden rounded-2xl">
+                <img
+                  src={images[0].src}
+                  alt={images[0].alt}
+                  className="w-full h-auto object-cover transform transition-all duration-500 ease-out group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute bottom-0 left-0 right-0 p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <h3 className="text-xl font-playfair font-bold mb-2">{images[0].alt}</h3>
+                  <p className="font-lora">{images[0].description}</p>
+                </div>
+              </div>
+            </motion.div>
+            
+            {/* Professional Journey Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="break-inside-avoid mb-8"
+            >
+              <div className="p-8 gradient-violet rounded-2xl shadow-lg">
+                <Building size={32} className="text-white mb-4" />
+                <h3 className="text-xl font-playfair font-semibold mb-4 text-white">MEAT FACTORY DIRECTOR</h3>
+                <p className="font-lora text-white/90 leading-relaxed tracking-wide">Leading operations and innovation in the meat processing industry, establishing efficient production systems and quality control measures.</p>
+              </div>
+            </motion.div>
+            
+            {/* Second image */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="break-inside-avoid mb-8"
+            >
+              <div className="relative group overflow-hidden rounded-2xl">
+                <img
+                  src={images[1].src}
+                  alt={images[1].alt}
+                  className="w-full h-auto object-cover transform transition-all duration-500 ease-out group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute bottom-0 left-0 right-0 p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <h3 className="text-xl font-playfair font-bold mb-2">{images[1].alt}</h3>
+                  <p className="font-lora">{images[1].description}</p>
+                </div>
+              </div>
+            </motion.div>
+            
+            {/* Restaurant Owner Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="break-inside-avoid mb-8"
+            >
+              <div className="p-8 gradient-violet-light rounded-2xl shadow-lg">
+                <Building size={32} className="text-violet-deep mb-4" />
+                <h3 className="text-xl font-playfair font-semibold mb-4 text-violet-deep">RESTAURANT OWNER</h3>
+                <p className="font-lora text-violet-deep/90 leading-relaxed tracking-wide">Successfully established and managed a restaurant in central Baku, creating exceptional dining experiences and building a strong customer base.</p>
+              </div>
+            </motion.div>
+            
+            {/* International Connections Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="break-inside-avoid mb-8"
+            >
+              <div className="p-8 bg-white rounded-2xl shadow-lg border-2 border-violet-light glow-violet">
+                <Globe size={32} className="text-violet-deep mb-4" />
+                <h3 className="text-xl font-playfair font-semibold mb-4 text-violet-deep">INTERNATIONAL CONNECTIONS</h3>
+                <p className="font-lora text-violet-bright/80 leading-relaxed tracking-wide">Built an extensive network spanning Azerbaijan, Dubai, and beyond, facilitating meaningful connections and business opportunities across borders.</p>
+              </div>
+            </motion.div>
+            
+            {/* Real Estate Consultant Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              viewport={{ once: true }}
+              className="break-inside-avoid mb-8"
+            >
+              <div className="p-8 gradient-violet rounded-2xl shadow-lg">
+                <Building size={32} className="text-white mb-4" />
+                <h3 className="text-xl font-playfair font-semibold mb-4 text-white">REAL ESTATE CONSULTANT</h3>
+                <p className="font-lora text-white/90 leading-relaxed tracking-wide">Providing expert guidance in Dubai's real estate market, connecting influential clients with premium properties and investment opportunities.</p>
+              </div>
+            </motion.div>
+            
+            {/* Collaborative Growth Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              viewport={{ once: true }}
+              className="break-inside-avoid mb-8"
+            >
+              <div className="p-8 bg-white rounded-2xl shadow-lg border-2 border-violet-bright glow-violet">
+                <Handshake size={32} className="text-violet-deep mb-4" />
+                <h3 className="text-xl font-playfair font-semibold mb-4 text-violet-deep">COLLABORATIVE GROWTH</h3>
+                <p className="font-lora text-violet-bright/80 leading-relaxed tracking-wide">Uniting diverse professionals and businesses toward shared goals of development and success through strategic partnerships and innovative solutions.</p>
+              </div>
+            </motion.div>
           </div>
-          <h2 className="text-3xl font-playfair font-bold text-center mb-12 text-violet-deep text-shadow-violet">Professional Journey</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="p-8 gradient-violet rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgba(212,175,55,0.1)] transition-all duration-300 transform hover:-translate-y-1">
-              <h3 className="text-xl font-playfair font-semibold mb-4 text-white">MEAT FACTORY DIRECTOR</h3>
-              <p className="font-lora text-white/90 leading-relaxed tracking-wide">Leading operations and innovation in the meat processing industry, establishing efficient production systems and quality control measures.</p>
-            </div>
-            <div className="p-8 gradient-violet-light rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgba(212,175,55,0.1)] transition-all duration-300 transform hover:-translate-y-1">
-              <h3 className="text-xl font-playfair font-semibold mb-4 text-violet-deep">RESTAURANT OWNER</h3>
-              <p className="font-lora text-violet-deep/90 leading-relaxed tracking-wide">Successfully established and managed a restaurant in central Baku, creating exceptional dining experiences and building a strong customer base.</p>
-            </div>
-            <div className="p-8 gradient-violet rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgba(212,175,55,0.1)] transition-all duration-300 transform hover:-translate-y-1">
-              <h3 className="text-xl font-playfair font-semibold mb-4 text-white">REAL ESTATE CONSULTANT</h3>
-              <p className="font-lora text-white/90 leading-relaxed tracking-wide">Providing expert guidance in Dubai's real estate market, connecting influential clients with premium properties and investment opportunities.</p>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Global Network Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="py-20"
-        >
-          <div className="flex justify-center mb-10">
-            <Globe size={48} className="text-violet-deep" strokeWidth={2.5} />
-          </div>
-          <h2 className="text-3xl font-playfair font-bold text-center mb-12 text-violet-deep text-shadow-violet">Global Network</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="p-8 bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgba(212,175,55,0.1)] transition-all duration-300 transform hover:-translate-y-1 border-2 border-violet-light glow-violet">
-              <h3 className="text-xl font-playfair font-semibold mb-4 text-violet-deep">INTERNATIONAL CONNECTIONS</h3>
-              <p className="font-lora text-violet-bright/80 leading-relaxed tracking-wide">Built an extensive network spanning Azerbaijan, Dubai, and beyond, facilitating meaningful connections and business opportunities across borders.</p>
-            </div>
-            <div className="p-8 bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgba(212,175,55,0.1)] transition-all duration-300 transform hover:-translate-y-1 border-2 border-violet-bright glow-violet">
-              <h3 className="text-xl font-playfair font-semibold mb-4 text-violet-deep">COLLABORATIVE GROWTH</h3>
-              <p className="font-lora text-violet-bright/80 leading-relaxed tracking-wide">Uniting diverse professionals and businesses toward shared goals of development and success through strategic partnerships and innovative solutions.</p>
-            </div>
-          </div>
-        </motion.div>
+        </div>
+        
+        {/* We've incorporated the Professional Journey and Global Network sections 
+            into the masonry grid above, so we can remove the standalone sections */}
       </section>
       
       <Footer />
