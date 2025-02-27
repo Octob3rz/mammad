@@ -1,6 +1,7 @@
 
 import React from "react";
 import Hero from "../components/Hero";
+import Background from "../components/background";
 import MasonryGrid from "../components/MasonryGrid";
 import BioCard from "../components/BioCard";
 import Footer from "../components/Footer";
@@ -28,10 +29,11 @@ const achievements = [
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
+    <div className="min-h-screen relative">
+      <Background />
       <Hero />
       
-      <section className="max-w-7xl mx-auto py-16 px-4">
+      <section className="max-w-7xl mx-auto py-16 px-4 relative z-10">
         <div className="space-y-24">
           <BioCard
             title="About Me"
