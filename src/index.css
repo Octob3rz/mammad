@@ -17,7 +17,7 @@
     --primary: 267 75% 50%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 84 59% 65%;
+    --secondary: 267 45% 65%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
@@ -38,8 +38,8 @@
     /* Custom colors based on the screenshot */
     --violet-deep: 267 75% 35%;
     --violet-bright: 267 75% 50%;
-    --lime-bright: 84 59% 65%;
-    --lime-muted: 84 39% 55%;
+    --violet-light: 267 55% 70%;
+    --violet-muted: 267 35% 60%;
   }
 
   .dark {
@@ -55,7 +55,7 @@
     --primary: 267 75% 50%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 84 59% 65%;
+    --secondary: 267 45% 65%;
     --secondary-foreground: 210 40% 98%;
 
     --muted: 267 75% 20%;
@@ -87,8 +87,8 @@
     @apply bg-gradient-to-r from-[hsl(267,75%,35%)] to-[hsl(267,75%,50%)];
   }
 
-  .gradient-lime {
-    @apply bg-gradient-to-r from-[hsl(84,59%,65%)] to-[hsl(84,39%,55%)];
+  .gradient-violet-light {
+    @apply bg-gradient-to-r from-[hsl(267,55%,70%)] to-[hsl(267,35%,60%)];
   }
 
   .text-shadow-violet {
@@ -97,9 +97,5 @@
 
   .glow-violet {
     box-shadow: 0 0 20px hsl(267, 75%, 50%, 0.3);
-  }
-
-  .glow-lime {
-    box-shadow: 0 0 20px hsl(84, 59%, 65%, 0.3);
   }
 }

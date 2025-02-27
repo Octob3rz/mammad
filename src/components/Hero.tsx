@@ -21,7 +21,7 @@ const Hero = () => {
         className="relative text-center text-white px-4"
       >
         <h1 className="text-4xl md:text-6xl font-bold mb-4 font-playfair text-shadow-violet">MAMMAD MAMATOV</h1>
-        <h3 className="text-xl md:text-2xl max-w-2xl mx-auto font-lora text-lime-bright">
+        <h3 className="text-xl md:text-2xl max-w-2xl mx-auto font-lora text-violet-light">
           Innovator. Entrepreneur. Visionary.
         </h3>
       </motion.div>

@@ -90,7 +90,7 @@ As a visionary entrepreneur with over a decade of experience, I've dedicated my 
               <h3 className="text-xl font-playfair font-semibold mb-4 text-white">MEAT FACTORY DIRECTOR</h3>
               <p className="font-lora text-white/90 leading-relaxed tracking-wide">Leading operations and innovation in the meat processing industry, establishing efficient production systems and quality control measures.</p>
             </div>
-            <div className="p-8 gradient-lime rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgba(212,175,55,0.1)] transition-all duration-300 transform hover:-translate-y-1">
+            <div className="p-8 gradient-violet-light rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgba(212,175,55,0.1)] transition-all duration-300 transform hover:-translate-y-1">
               <h3 className="text-xl font-playfair font-semibold mb-4 text-violet-deep">RESTAURANT OWNER</h3>
               <p className="font-lora text-violet-deep/90 leading-relaxed tracking-wide">Successfully established and managed a restaurant in central Baku, creating exceptional dining experiences and building a strong customer base.</p>
             </div>
@@ -111,7 +111,7 @@ As a visionary entrepreneur with over a decade of experience, I've dedicated my 
         >
           <h2 className="text-3xl font-playfair font-bold text-center mb-12 text-violet-deep text-shadow-violet">Global Network</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="p-8 bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgba(212,175,55,0.1)] transition-all duration-300 transform hover:-translate-y-1 border-2 border-lime-bright glow-lime">
+            <div className="p-8 bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgba(212,175,55,0.1)] transition-all duration-300 transform hover:-translate-y-1 border-2 border-violet-light glow-violet">
               <h3 className="text-xl font-playfair font-semibold mb-4 text-violet-deep">INTERNATIONAL CONNECTIONS</h3>
               <p className="font-lora text-violet-bright/80 leading-relaxed tracking-wide">Built an extensive network spanning Azerbaijan, Dubai, and beyond, facilitating meaningful connections and business opportunities across borders.</p>
             </div>

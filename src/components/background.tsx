@@ -1,8 +1,6 @@
 
 import { useState, useEffect } from 'react'
 
-const COLORS = ['hsl(267, 75%, 50%)', 'hsl(267, 75%, 35%)', 'hsl(84, 59%, 65%)', 'hsl(84, 39%, 55%)']
-
 export default function Background() {
   const [hoveredCell, setHoveredCell] = useState<number | null>(null)
   const [visibleCells, setVisibleCells] = useState<number[]>([])
@@ -109,14 +107,14 @@ interface CellProps {
 
 function Cell({ index, isActive, isHovered, onHover }: CellProps) {
   const getRandomColor = () => {
-    // Use more pastel/less vivid versions of the colors
-    const pastelColors = [
-      'hsl(267, 35%, 70%)', // Soft violet
-      'hsl(267, 25%, 60%)', // Muted violet
-      'hsl(84, 30%, 75%)',  // Soft lime
-      'hsl(84, 20%, 65%)'   // Muted lime
+    // Use only black and gray colors
+    const monochromeColors = [
+      '#222222', // Dark gray
+      '#444444', // Medium gray
+      '#666666', // Gray
+      '#000000', // Black
     ]
-    return pastelColors[Math.floor(Math.random() * pastelColors.length)]
+    return monochromeColors[Math.floor(Math.random() * monochromeColors.length)]
   }
   const [color] = useState(getRandomColor())
 
@@ -125,12 +123,12 @@ function Cell({ index, isActive, isHovered, onHover }: CellProps) {
       onMouseEnter={() => onHover(index)}
       className="transition-all duration-500 ease-in-out"
       style={{
-        background: isActive || isHovered ? `${color}20` : 'transparent', // More subtle background
+        background: isActive || isHovered ? `${color}10` : 'transparent',
         border: isActive || isHovered 
           ? `solid 1px ${color}` 
           : 'solid 0px transparent',
-        opacity: isActive ? 0.6 : isHovered ? 0.8 : 0, // Reduced opacity for less vividness
-        transform: isHovered ? 'scale(1.05)' : 'scale(1)', // Less dramatic scale for subtlety
+        opacity: isActive ? 0.6 : isHovered ? 0.8 : 0,
+        transform: isHovered ? 'scale(1.05)' : 'scale(1)',
       }}
     />
   )
