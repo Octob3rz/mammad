@@ -23,21 +23,21 @@
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 267 75% 50%;
+    --accent: 267 60% 40%;
     --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 267 75% 50%;
+    --border: 267 60% 40%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 267 75% 50%;
+    --ring: 267 60% 40%;
 
     --radius: 0.5rem;
 
     /* Custom colors based on the screenshot */
     --violet-deep: 267 75% 35%;
-    --violet-bright: 267 75% 50%;
+    --violet-bright: 267 65% 45%;
     --violet-light: 267 55% 70%;
     --violet-muted: 267 35% 60%;
   }
@@ -52,24 +52,24 @@
     --popover: 267 75% 10%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 267 75% 50%;
+    --primary: 267 65% 45%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 267 45% 65%;
+    --secondary: 267 45% 55%;
     --secondary-foreground: 210 40% 98%;
 
     --muted: 267 75% 20%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 267 75% 30%;
+    --accent: 267 65% 30%;
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 267 75% 30%;
+    --border: 267 65% 30%;
     --input: 267 75% 20%;
-    --ring: 267 75% 50%;
+    --ring: 267 65% 40%;
   }
 }
 
@@ -84,18 +84,18 @@
 
   /* Custom gradients and effects */
   .gradient-violet {
-    @apply bg-gradient-to-r from-[hsl(267,75%,35%)] to-[hsl(267,75%,50%)];
+    @apply bg-gradient-to-r from-[hsl(267,75%,30%)] to-[hsl(267,65%,45%)];
   }
 
   .gradient-violet-light {
-    @apply bg-gradient-to-r from-[hsl(267,55%,70%)] to-[hsl(267,35%,60%)];
+    @apply bg-gradient-to-r from-[hsl(267,55%,60%)] to-[hsl(267,45%,50%)];
   }
 
   .text-shadow-violet {
-    text-shadow: 0 0 20px hsl(267, 75%, 50%, 0.5);
+    text-shadow: 0 0 20px hsl(267, 65%, 45%, 0.5);
   }
 
   .glow-violet {
-    box-shadow: 0 0 20px hsl(267, 75%, 50%, 0.3);
+    box-shadow: 0 0 20px hsl(267, 65%, 45%, 0.3);
   }
 }

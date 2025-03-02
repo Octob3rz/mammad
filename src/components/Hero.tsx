@@ -11,7 +11,7 @@ const Hero = () => {
           alt="Hero"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/60" />
       </div>
       
       <motion.div
