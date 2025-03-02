@@ -143,7 +143,18 @@ export const LocaleProvider = ({ children }: { children: ReactNode }) => {
   }, [locale]);
 
   const t = (key: string): string => {
-    return translations[locale]?.[key as keyof typeof translations[typeof locale]] || key;
+    if (!translations[locale]) {
+      console.warn(`No translations found for locale: ${locale}`);
+      return key;
+    }
+    
+    const translation = translations[locale][key as keyof typeof translations[typeof locale]];
+    if (!translation) {
+      console.warn(`Translation key not found: ${key} in locale: ${locale}`);
+      return key;
+    }
+    
+    return translation;
   };
 
   return (
