@@ -1,5 +1,5 @@
 
-import React, { createContext, useState, useContext, ReactNode } from 'react';
+import React, { createContext, useState, useContext, ReactNode, useEffect } from 'react';
 
 type Locale = 'en' | 'ar' | 'ru' | 'tr';
 
@@ -135,8 +135,15 @@ export const useLocale = () => useContext(LocaleContext);
 export const LocaleProvider = ({ children }: { children: ReactNode }) => {
   const [locale, setLocale] = useState<Locale>('en');
 
+  // Effect to handle RTL direction for Arabic
+  useEffect(() => {
+    const dir = locale === 'ar' ? 'rtl' : 'ltr';
+    document.documentElement.dir = dir;
+    document.documentElement.lang = locale;
+  }, [locale]);
+
   const t = (key: string): string => {
-    return translations[locale][key as keyof typeof translations[typeof locale]] || key;
+    return translations[locale]?.[key as keyof typeof translations[typeof locale]] || key;
   };
 
   return (
