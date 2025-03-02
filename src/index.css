@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -84,11 +83,11 @@
 
   /* Custom gradients and effects */
   .gradient-violet {
-    @apply bg-gradient-to-r from-[hsl(267,75%,30%)] to-[hsl(267,65%,45%)];
+    @apply bg-gradient-to-r from-[hsl(267,75%,30%)] via-[hsl(267,70%,35%)] to-[hsl(267,65%,45%)];
   }
 
   .gradient-violet-light {
-    @apply bg-gradient-to-r from-[hsl(267,55%,60%)] to-[hsl(267,45%,50%)];
+    @apply bg-gradient-to-r from-[hsl(267,55%,65%)] via-[hsl(267,50%,60%)] to-[hsl(267,45%,55%)];
   }
 
   .text-shadow-violet {

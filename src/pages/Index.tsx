@@ -2,9 +2,10 @@
 import React from "react";
 import Hero from "../components/Hero";
 import Background from "../components/background";
-import MasonryGrid from "../components/MasonryGrid";
 import BioCard from "../components/BioCard";
 import Footer from "../components/Footer";
+import LanguageSelector from "../components/LanguageSelector";
+import { useLocale } from "../context/LocaleContext";
 import { motion } from "framer-motion";
 import { User, Award, Rocket, Building, Globe, Handshake } from "lucide-react";
 
@@ -24,17 +25,22 @@ const images = [
   },
 ];
 
-const achievements = [
-  { number: "15+", text: "Years Experience", icon: <User size={32} className="text-violet-deep mx-auto mb-4" /> },
-  { number: "5+", text: "Successful Projects", icon: <Rocket size={32} className="text-violet-deep mx-auto mb-4" /> },
-  { number: "1M+", text: "Revenue Generated", icon: <Award size={32} className="text-violet-deep mx-auto mb-4" /> },
-  { number: "100+", text: "Happy Clients", icon: <Handshake size={32} className="text-violet-deep mx-auto mb-4" /> },
-];
-
 const Index = () => {
+  const { t } = useLocale();
+
+  const achievements = [
+    { number: "15+", text: t('achievements.experience'), icon: <User size={32} className="text-violet-deep mx-auto mb-4" /> },
+    { number: "5+", text: t('achievements.projects'), icon: <Rocket size={32} className="text-violet-deep mx-auto mb-4" /> },
+    { number: "1M+", text: t('achievements.revenue'), icon: <Award size={32} className="text-violet-deep mx-auto mb-4" /> },
+    { number: "100+", text: t('achievements.clients'), icon: <Handshake size={32} className="text-violet-deep mx-auto mb-4" /> },
+  ];
+
   return (
     <div className="min-h-screen relative">
       <Background />
+      <div className="fixed top-5 right-5 z-50">
+        <LanguageSelector />
+      </div>
       <Hero />
       
       <section className="max-w-7xl mx-auto py-16 px-4 relative z-10">
@@ -50,9 +56,8 @@ const Index = () => {
           </motion.div>
           
           <BioCard
-            title="About Me"
-            content="Being born in Azerbaijan i cultivated dedication to my work in all aspects since i was born. In my 30s i've been thriving as a director of meet factory and later decided to open an own restaurant in the center of Baku. After that i've been living in Dubai and providing my professional guidance as a real estate agent to many influencial people. There i acquired extremely large circle of contacts that allow me to connect people from different places and unite them for one goal: develop and thrive together. 
-As a visionary entrepreneur with over a decade of experience, I've dedicated my career to pushing the boundaries of entrepreneurship and creating meaningful impact through interactions with people."
+            title={t('about.title')}
+            content={t('about.content')}
             imageSrc="/5.jpeg"
             imagePosition="right"
           />
@@ -68,8 +73,8 @@ As a visionary entrepreneur with over a decade of experience, I've dedicated my 
           </motion.div>
           
           <BioCard
-            title="My Vision"
-            content="I believe in harnessing the power of social communication to solve real-world problems and create solutions that make a difference in people's lives."
+            title={t('vision.title')}
+            content={t('vision.content')}
             imageSrc="/2.jpeg"
             imagePosition="left"
           />
@@ -86,7 +91,7 @@ As a visionary entrepreneur with over a decade of experience, I've dedicated my 
           <div className="flex justify-center mb-10">
             <Award size={48} className="text-violet-deep" strokeWidth={2.5} />
           </div>
-          <h2 className="text-3xl font-playfair font-bold text-center mb-12 text-violet-deep text-shadow-violet">Achievements</h2>
+          <h2 className="text-3xl font-playfair font-bold text-center mb-12 text-violet-light text-shadow-violet">{t('achievements.title')}</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {achievements.map((item, index) => (
               <motion.div
@@ -115,8 +120,8 @@ As a visionary entrepreneur with over a decade of experience, I've dedicated my 
             viewport={{ once: true }}
             className="mb-16 text-center"
           >
-            <h2 className="text-3xl font-playfair font-bold text-violet-deep text-shadow-violet">My Journey in Pictures</h2>
-            <p className="mt-4 text-violet-bright/80 max-w-2xl mx-auto font-lora">Visual highlights from my professional experience and global connections</p>
+            <h2 className="text-3xl font-playfair font-bold text-violet-light text-shadow-violet">{t('journey.title')}</h2>
+            <p className="mt-4 text-violet-light max-w-2xl mx-auto font-lora">{t('journey.subtitle')}</p>
           </motion.div>
           
           {/* Masonry grid with mixed content */}
@@ -153,8 +158,8 @@ As a visionary entrepreneur with over a decade of experience, I've dedicated my 
             >
               <div className="p-8 gradient-violet rounded-2xl shadow-lg">
                 <Building size={32} className="text-white mb-4" />
-                <h3 className="text-xl font-playfair font-semibold mb-4 text-white">MEAT FACTORY DIRECTOR</h3>
-                <p className="font-lora text-white/90 leading-relaxed tracking-wide">Leading operations and innovation in the meat processing industry, establishing efficient production systems and quality control measures.</p>
+                <h3 className="text-xl font-playfair font-semibold mb-4 text-white">{t('meat.title')}</h3>
+                <p className="font-lora text-white/90 leading-relaxed tracking-wide">{t('meat.content')}</p>
               </div>
             </motion.div>
             
@@ -180,7 +185,7 @@ As a visionary entrepreneur with over a decade of experience, I've dedicated my 
               </div>
             </motion.div>
             
-            {/* Restaurant Owner Card */}
+            {/* Restaurant Owner Card - Updated with better contrast */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -189,9 +194,9 @@ As a visionary entrepreneur with over a decade of experience, I've dedicated my 
               className="break-inside-avoid mb-8"
             >
               <div className="p-8 gradient-violet-light rounded-2xl shadow-lg">
-                <Building size={32} className="text-violet-deep mb-4" />
-                <h3 className="text-xl font-playfair font-semibold mb-4 text-violet-deep">RESTAURANT OWNER</h3>
-                <p className="font-lora text-violet-deep/90 leading-relaxed tracking-wide">Successfully established and managed a restaurant in central Baku, creating exceptional dining experiences and building a strong customer base.</p>
+                <Building size={32} className="text-white mb-4" />
+                <h3 className="text-xl font-playfair font-semibold mb-4 text-white">{t('restaurant.title')}</h3>
+                <p className="font-lora text-white/90 leading-relaxed tracking-wide">{t('restaurant.content')}</p>
               </div>
             </motion.div>
             
@@ -205,8 +210,8 @@ As a visionary entrepreneur with over a decade of experience, I've dedicated my 
             >
               <div className="p-8 bg-white rounded-2xl shadow-lg border-2 border-violet-light glow-violet">
                 <Globe size={32} className="text-violet-deep mb-4" />
-                <h3 className="text-xl font-playfair font-semibold mb-4 text-violet-deep">INTERNATIONAL CONNECTIONS</h3>
-                <p className="font-lora text-violet-bright/80 leading-relaxed tracking-wide">Built an extensive network spanning Azerbaijan, Dubai, and beyond, facilitating meaningful connections and business opportunities across borders.</p>
+                <h3 className="text-xl font-playfair font-semibold mb-4 text-violet-deep">{t('connections.title')}</h3>
+                <p className="font-lora text-violet-bright/80 leading-relaxed tracking-wide">{t('connections.content')}</p>
               </div>
             </motion.div>
             
@@ -220,8 +225,8 @@ As a visionary entrepreneur with over a decade of experience, I've dedicated my 
             >
               <div className="p-8 gradient-violet rounded-2xl shadow-lg">
                 <Building size={32} className="text-white mb-4" />
-                <h3 className="text-xl font-playfair font-semibold mb-4 text-white">REAL ESTATE CONSULTANT</h3>
-                <p className="font-lora text-white/90 leading-relaxed tracking-wide">Providing expert guidance in Dubai's real estate market, connecting influential clients with premium properties and investment opportunities.</p>
+                <h3 className="text-xl font-playfair font-semibold mb-4 text-white">{t('realestate.title')}</h3>
+                <p className="font-lora text-white/90 leading-relaxed tracking-wide">{t('realestate.content')}</p>
               </div>
             </motion.div>
             
@@ -235,15 +240,12 @@ As a visionary entrepreneur with over a decade of experience, I've dedicated my 
             >
               <div className="p-8 bg-white rounded-2xl shadow-lg border-2 border-violet-bright glow-violet">
                 <Handshake size={32} className="text-violet-deep mb-4" />
-                <h3 className="text-xl font-playfair font-semibold mb-4 text-violet-deep">COLLABORATIVE GROWTH</h3>
-                <p className="font-lora text-violet-bright/80 leading-relaxed tracking-wide">Uniting diverse professionals and businesses toward shared goals of development and success through strategic partnerships and innovative solutions.</p>
+                <h3 className="text-xl font-playfair font-semibold mb-4 text-violet-deep">{t('growth.title')}</h3>
+                <p className="font-lora text-violet-bright/80 leading-relaxed tracking-wide">{t('growth.content')}</p>
               </div>
             </motion.div>
           </div>
         </div>
-        
-        {/* We've incorporated the Professional Journey and Global Network sections 
-            into the masonry grid above, so we can remove the standalone sections */}
       </section>
       
       <Footer />
