@@ -5,6 +5,7 @@ import Background from "../components/background";
 import Footer from "../components/Footer";
 import LanguageSelector from "../components/LanguageSelector";
 import MainSection from "../components/MainSection";
+import FloatingNav from "../components/FloatingNav";
 
 const Index = () => {
   return (
@@ -13,6 +14,7 @@ const Index = () => {
       <div className="fixed top-5 right-5 z-50">
         <LanguageSelector />
       </div>
+      <FloatingNav />
       <Hero />
       <MainSection />
       <Footer />

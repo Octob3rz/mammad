@@ -23,12 +23,14 @@ const MainSection = () => {
           <User size={48} className="text-violet-deep" strokeWidth={2.5} />
         </motion.div>
         
-        <BioCard
-          title={t('about.title')}
-          content={t('about.content')}
-          imageSrc="/5.jpeg"
-          imagePosition="right"
-        />
+        <div id="about">
+          <BioCard
+            title={t('about.title')}
+            content={t('about.content')}
+            imageSrc="/5.jpeg"
+            imagePosition="right"
+          />
+        </div>
         
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -40,16 +42,20 @@ const MainSection = () => {
           <Rocket size={48} className="text-violet-deep" strokeWidth={2.5} />
         </motion.div>
         
-        <BioCard
-          title={t('vision.title')}
-          content={t('vision.content')}
-          imageSrc="/2.jpeg"
-          imagePosition="left"
-        />
+        <div id="vision">
+          <BioCard
+            title={t('vision.title')}
+            content={t('vision.content')}
+            imageSrc="/2.jpeg"
+            imagePosition="left"
+          />
+        </div>
       </div>
 
       {/* Achievements Section */}
-      <Achievements />
+      <div id="achievements">
+        <Achievements />
+      </div>
 
       {/* Journey Section with Masonry Grid */}
       <Journey />

@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Building, Globe, Handshake } from "lucide-react";
 import { useLocale } from "../context/LocaleContext";
+import ElegantFrame from "./ElegantFrame";
 
 const Journey = () => {
   const { t } = useLocale();
@@ -24,7 +25,7 @@ const Journey = () => {
   ];
 
   return (
-    <div className="py-20">
+    <div className="py-20" id="journey">
       {/* Title for the masonry section */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -51,17 +52,10 @@ const Journey = () => {
           viewport={{ once: true }}
           className="break-inside-avoid mb-8"
         >
-          <div className="relative group overflow-hidden rounded-2xl">
-            <img
-              src={images[0].src}
-              alt={images[0].alt}
-              className="w-full h-auto object-cover transform transition-all duration-500 ease-out group-hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <div className="absolute bottom-0 left-0 right-0 p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-              <h3 className="text-xl font-playfair font-bold mb-2">{images[0].alt}</h3>
-              <p className="font-lora">{images[0].description}</p>
-            </div>
+          <ElegantFrame src={images[0].src} alt={images[0].alt} />
+          <div className="mt-2 p-3 bg-white/90 backdrop-blur-sm rounded-lg shadow-sm">
+            <h3 className="text-lg font-playfair font-semibold text-violet-deep">{images[0].alt}</h3>
+            <p className="text-sm font-lora text-violet-bright/80">{images[0].description}</p>
           </div>
         </motion.div>
         
@@ -88,17 +82,10 @@ const Journey = () => {
           viewport={{ once: true }}
           className="break-inside-avoid mb-8"
         >
-          <div className="relative group overflow-hidden rounded-2xl">
-            <img
-              src={images[1].src}
-              alt={images[1].alt}
-              className="w-full h-auto object-cover transform transition-all duration-500 ease-out group-hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <div className="absolute bottom-0 left-0 right-0 p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-              <h3 className="text-xl font-playfair font-bold mb-2">{images[1].alt}</h3>
-              <p className="font-lora">{images[1].description}</p>
-            </div>
+          <ElegantFrame src={images[1].src} alt={images[1].alt} />
+          <div className="mt-2 p-3 bg-white/90 backdrop-blur-sm rounded-lg shadow-sm">
+            <h3 className="text-lg font-playfair font-semibold text-violet-deep">{images[1].alt}</h3>
+            <p className="text-sm font-lora text-violet-bright/80">{images[1].description}</p>
           </div>
         </motion.div>
         
@@ -125,7 +112,7 @@ const Journey = () => {
           viewport={{ once: true }}
           className="break-inside-avoid mb-8"
         >
-          <div className="p-8 bg-white rounded-2xl shadow-lg border-2 border-violet-light glow-violet">
+          <div className="p-8 bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg border-2 border-violet-light glow-violet">
             <Globe size={32} className="text-violet-deep mb-4" />
             <h3 className="text-xl font-playfair font-semibold mb-4 text-violet-deep">{t('connections.title')}</h3>
             <p className="font-lora text-violet-bright/80 leading-relaxed tracking-wide">{t('connections.content')}</p>
@@ -155,7 +142,7 @@ const Journey = () => {
           viewport={{ once: true }}
           className="break-inside-avoid mb-8"
         >
-          <div className="p-8 bg-white rounded-2xl shadow-lg border-2 border-violet-bright glow-violet">
+          <div className="p-8 bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg border-2 border-violet-bright glow-violet">
             <Handshake size={32} className="text-violet-deep mb-4" />
             <h3 className="text-xl font-playfair font-semibold mb-4 text-violet-deep">{t('growth.title')}</h3>
             <p className="font-lora text-violet-bright/80 leading-relaxed tracking-wide">{t('growth.content')}</p>

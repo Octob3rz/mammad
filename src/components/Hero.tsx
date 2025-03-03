@@ -7,7 +7,7 @@ const Hero = () => {
   const { t, locale } = useLocale();
 
   return (
-    <div className="relative h-screen flex items-center justify-center overflow-hidden">
+    <div id="top" className="relative h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
         <img
           src="/1.jpeg"
