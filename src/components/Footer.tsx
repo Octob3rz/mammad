@@ -43,7 +43,7 @@ const Footer = () => {
               <a href="mailto:mr.mamed702@gmail.com" className="hover:text-blue-400 transition-colors">
                 <Mail className="w-6 h-6" />
               </a>
-              <a href="https://wa.me/+971581292767" className="hover:text-blue-400 transition-colors">
+              <a href="https://wa.me/+971581292767" className="hover:text-blue-400 transition-colors" target="_blank" rel="noopener noreferrer">
                 <Phone className="w-6 h-6" />
               </a>
             </div>
