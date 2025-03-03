@@ -27,7 +27,7 @@ const MainSection = () => {
           <BioCard
             title={t('about.title')}
             content={t('about.content')}
-            imageSrc="/5.jpeg"
+            imageSrc="/5.png"
             imagePosition="right"
           />
         </div>
