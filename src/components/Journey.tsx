@@ -52,10 +52,6 @@ const Journey = () => {
             alt={images[0].alt}
             className="w-full h-full object-cover rounded-lg shadow-md transform transition-transform duration-700 hover:scale-105"
           />
-          <div className="mt-2 p-3 bg-white/90 backdrop-blur-sm rounded-lg shadow-sm">
-            <h3 className="text-lg font-playfair font-semibold text-violet-deep">{images[0].alt}</h3>
-            <p className="text-sm font-lora text-violet-bright/80">{images[0].description}</p>
-          </div>
         </motion.div>
         
         {/* Professional Journey Card */}
