@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useLocale } from "../context/LocaleContext";
-import { Mail, MapPin, Phone, Linkedin, Instagram } from "lucide-react";
+import { Mail, MapPin, Phone, Instagram, Send } from "lucide-react";
 
 const Footer = () => {
   const { t } = useLocale();
@@ -34,16 +34,16 @@ const Footer = () => {
           >
             <h4 className="text-2xl font-playfair font-semibold mb-6">{t('footer.connect')}</h4>
             <div className="flex space-x-4">
-              <a href="https://www.linkedin.com/in/viacheslav-mamatov-61169032b/" className="hover:text-blue-400 transition-colors">
-                <Linkedin className="w-6 h-6" />
-              </a>
-              <a href="https://www.linkedin.com/in/viacheslav-mamatov-61169032b/" className="hover:text-pink-400 transition-colors">
+              <a href="https://www.instagram.com/mamed777official/" className="hover:text-pink-400 transition-colors">
                 <Instagram className="w-6 h-6" />
               </a>
-              <a href="mailto:vimawebsolutions@gmail.com" className="hover:text-blue-400 transition-colors">
+              <a href="" className="hover:text-blue-400 transition-colors">
+                <Send classname="w-6 h-6" />
+              </a>
+              <a href="mailto:" className="hover:text-blue-400 transition-colors">
                 <Mail className="w-6 h-6" />
               </a>
-              <a href="tel:+905356765899" className="hover:text-blue-400 transition-colors">
+              <a href="https://wa.me/+971581292767" className="hover:text-blue-400 transition-colors">
                 <Phone className="w-6 h-6" />
               </a>
             </div>
