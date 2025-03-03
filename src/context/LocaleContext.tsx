@@ -140,6 +140,7 @@ export const LocaleProvider = ({ children }: { children: ReactNode }) => {
     const dir = locale === 'ar' ? 'rtl' : 'ltr';
     document.documentElement.dir = dir;
     document.documentElement.lang = locale;
+    console.log(`Language changed to: ${locale}`);
   }, [locale]);
 
   const t = (key: string): string => {

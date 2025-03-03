@@ -21,6 +21,11 @@ const LanguageSelector = () => {
   ];
 
   const currentLanguage = languages.find(lang => lang.code === locale) || languages[0];
+  
+  const handleLanguageChange = (langCode: 'en' | 'ar' | 'ru' | 'tr') => {
+    console.log(`Setting language to: ${langCode}`);
+    setLocale(langCode);
+  };
 
   return (
     <DropdownMenu>
@@ -33,7 +38,7 @@ const LanguageSelector = () => {
           <DropdownMenuItem
             key={lang.code}
             className="flex items-center gap-2 cursor-pointer"
-            onClick={() => setLocale(lang.code as 'en' | 'ar' | 'ru' | 'tr')}
+            onClick={() => handleLanguageChange(lang.code as 'en' | 'ar' | 'ru' | 'tr')}
           >
             <motion.span 
               initial={{ scale: 1 }}
