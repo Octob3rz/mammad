@@ -13,14 +13,10 @@ const Journey = () => {
     {
       id: 1,
       src: "/4.jpeg",
-      alt: "Tech innovation",
-      description: "Embracing technological innovation to create meaningful solutions."
     },
     {
       id: 2,
       src: "/3.jpeg",
-      alt: "Working on laptop",
-      description: "Dedicated to excellence in every project and initiative."
     },
   ];
 
