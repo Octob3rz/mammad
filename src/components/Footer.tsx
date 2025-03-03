@@ -40,7 +40,7 @@ const Footer = () => {
               <a href="" className="hover:text-blue-400 transition-colors">
                 <Send classname="w-6 h-6" />
               </a>
-              <a href="mailto:" className="hover:text-blue-400 transition-colors">
+              <a href="mailto:mr.mamed702@gmail.com" className="hover:text-blue-400 transition-colors">
                 <Mail className="w-6 h-6" />
               </a>
               <a href="https://wa.me/+971581292767" className="hover:text-blue-400 transition-colors">
