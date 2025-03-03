@@ -3,7 +3,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Building, Globe, Handshake } from "lucide-react";
 import { useLocale } from "../context/LocaleContext";
-import ElegantFrame from "./ElegantFrame";
 
 const Journey = () => {
   const { t } = useLocale();
@@ -48,7 +47,11 @@ const Journey = () => {
           viewport={{ once: true }}
           className="break-inside-avoid mb-8"
         >
-          <ElegantFrame src={images[0].src} alt={images[0].alt} />
+          <img
+            src={images[0].src}
+            alt={images[0].alt}
+            className="w-full h-full object-cover rounded-lg shadow-md transform transition-transform duration-700 hover:scale-105"
+          />
           <div className="mt-2 p-3 bg-white/90 backdrop-blur-sm rounded-lg shadow-sm">
             <h3 className="text-lg font-playfair font-semibold text-violet-deep">{images[0].alt}</h3>
             <p className="text-sm font-lora text-violet-bright/80">{images[0].description}</p>
@@ -78,7 +81,11 @@ const Journey = () => {
           viewport={{ once: true }}
           className="break-inside-avoid mb-8"
         >
-          <ElegantFrame src={images[1].src} alt={images[1].alt} />
+          <img
+            src={images[1].src}
+            alt={images[1].alt}
+            className="w-full h-full object-cover rounded-lg shadow-md transform transition-transform duration-700 hover:scale-105"
+          />
           <div className="mt-2 p-3 bg-white/90 backdrop-blur-sm rounded-lg shadow-sm">
             <h3 className="text-lg font-playfair font-semibold text-violet-deep">{images[1].alt}</h3>
             <p className="text-sm font-lora text-violet-bright/80">{images[1].description}</p>

@@ -1,7 +1,6 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import ElegantFrame from "./ElegantFrame";
 
 interface BioCardProps {
   title: string;
@@ -29,14 +28,18 @@ const BioCard = ({ title, content, imageSrc, imagePosition = 'left' }: BioCardPr
         <p className="font-lora text-[#555555] leading-relaxed tracking-wide">{content}</p>
       </div>
 
-      {/* Image with Elegant Frame */}
+      {/* Image */}
       {imageSrc && (
         <div className={`md:-mt-12 md:-mb-12 z-0 ${imagePosition === 'right' ? 'md:order-2' : 'md:order-1'}`}>
-          <ElegantFrame 
-            src={imageSrc} 
-            alt={title} 
-            className="h-[400px] shadow-[0_8px_30px_rgb(0,0,0,0.12)]" 
-          />
+          <div className="relative rounded-lg overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
+            <div className="absolute inset-0 bg-gradient-to-tr from-[#F1F1F1]/5 to-transparent opacity-50 mix-blend-overlay z-10"></div>
+            <img
+              src={imageSrc} 
+              alt={title} 
+              className="w-full h-[400px] object-cover transform transition-transform duration-700 hover:scale-105" 
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/5 to-black/30 opacity-0 hover:opacity-100 transition-opacity duration-300 z-10"></div>
+          </div>
         </div>
       )}
     </motion.div>
