@@ -34,7 +34,7 @@ const Footer = () => {
           >
             <h4 className="text-2xl font-playfair font-semibold mb-6">{t('footer.connect')}</h4>
             <div className="flex space-x-4">
-              <a href="https://www.instagram.com/mamed777official/" className="hover:text-pink-400 transition-colors">
+              <a href="https://www.instagram.com/mamed777official/" className="hover:text-pink-400 transition-colors" target="_blank" rel="noopener noreferrer">
                 <Instagram className="w-6 h-6" />
               </a>
               <a href="" className="hover:text-blue-400 transition-colors">
