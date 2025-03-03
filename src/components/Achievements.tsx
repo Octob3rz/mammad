@@ -8,10 +8,26 @@ const Achievements = () => {
   const { t } = useLocale();
 
   const achievements = [
-    { number: "15+", text: t('achievements.experience'), icon: <User size={32} className="text-violet-deep mx-auto mb-4" /> },
-    { number: "5+", text: t('achievements.projects'), icon: <Rocket size={32} className="text-violet-deep mx-auto mb-4" /> },
-    { number: "1M+", text: t('achievements.revenue'), icon: <Award size={32} className="text-violet-deep mx-auto mb-4" /> },
-    { number: "100+", text: t('achievements.clients'), icon: <Handshake size={32} className="text-violet-deep mx-auto mb-4" /> },
+    { 
+      number: "15+", 
+      text: t('achievements.experience'), 
+      icon: <User size={32} className="text-violet-deep mx-auto mb-4" /> 
+    },
+    { 
+      number: "5+", 
+      text: t('achievements.projects'), 
+      icon: <Rocket size={32} className="text-violet-deep mx-auto mb-4" /> 
+    },
+    { 
+      number: "1M+", 
+      text: t('achievements.revenue'), 
+      icon: <Award size={32} className="text-violet-deep mx-auto mb-4" /> 
+    },
+    { 
+      number: "100+", 
+      text: t('achievements.clients'), 
+      icon: <Handshake size={32} className="text-violet-deep mx-auto mb-4" /> 
+    },
   ];
 
   return (
@@ -25,7 +41,9 @@ const Achievements = () => {
       <div className="flex justify-center mb-10">
         <Award size={48} className="text-violet-deep" strokeWidth={2.5} />
       </div>
-      <h2 className="text-3xl font-playfair font-bold text-center mb-12 text-violet-light text-shadow-violet">{t('achievements.title')}</h2>
+      <h2 className="text-3xl font-playfair font-bold text-center mb-12 text-violet-light text-shadow-violet">
+        {t('achievements.title')}
+      </h2>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
         {achievements.map((item, index) => (
           <motion.div

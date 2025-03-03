@@ -33,8 +33,12 @@ const Journey = () => {
         viewport={{ once: true }}
         className="mb-16 text-center"
       >
-        <h2 className="text-3xl font-playfair font-bold text-violet-light text-shadow-violet">{t('journey.title')}</h2>
-        <p className="mt-4 text-violet-light max-w-2xl mx-auto font-lora">{t('journey.subtitle')}</p>
+        <h2 className="text-3xl font-playfair font-bold text-violet-light text-shadow-violet">
+          {t('journey.title')}
+        </h2>
+        <p className="mt-4 text-violet-light max-w-2xl mx-auto font-lora">
+          {t('journey.subtitle')}
+        </p>
       </motion.div>
       
       {/* Masonry grid with mixed content */}
