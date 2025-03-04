@@ -7,7 +7,7 @@ import { useLocale } from "../context/LocaleContext";
 const Journey = () => {
   const { t } = useLocale();
 
-  // Images data for the masonry grid with added alt text and description
+  // Images data for the masonry grid with added alt text and description - added 8.png
   const images = [
     {
       id: 1,
@@ -32,6 +32,12 @@ const Journey = () => {
       src: "/7.png",
       alt: "Journey image 4",
       description: "Global business connections"
+    },
+    {
+      id: 5,
+      src: "/8.png",
+      alt: "Journey image 5",
+      description: "Strategic partnerships"
     }
   ];
 
@@ -115,7 +121,7 @@ const Journey = () => {
           </div>
         </motion.div>
         
-        {/* New Image 6.png */}
+        {/* Image 6.png */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -145,7 +151,7 @@ const Journey = () => {
           </div>
         </motion.div>
         
-        {/* New Image 7.png */}
+        {/* Image 7.png */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -156,6 +162,21 @@ const Journey = () => {
           <img
             src={images[3].src}
             alt={images[3].alt}
+            className="w-full h-full object-cover rounded-lg shadow-md transform transition-transform duration-700 hover:scale-105"
+          />
+        </motion.div>
+        
+        {/* NEW Image 8.png */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.46 }}
+          viewport={{ once: true }}
+          className="break-inside-avoid mb-8"
+        >
+          <img
+            src={images[4].src}
+            alt={images[4].alt}
             className="w-full h-full object-cover rounded-lg shadow-md transform transition-transform duration-700 hover:scale-105"
           />
         </motion.div>
