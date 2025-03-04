@@ -7,16 +7,32 @@ import { useLocale } from "../context/LocaleContext";
 const Journey = () => {
   const { t } = useLocale();
 
-  // Images data for the masonry grid
+  // Images data for the masonry grid with added alt text and description
   const images = [
     {
       id: 1,
       src: "/4.jpeg",
+      alt: "Journey image 1",
+      description: "Professional journey snapshot"
     },
     {
       id: 2,
       src: "/3.jpeg",
+      alt: "Journey image 2",
+      description: "Business development highlights"
     },
+    {
+      id: 3,
+      src: "/6.png",
+      alt: "Journey image 3",
+      description: "Entrepreneurial vision"
+    },
+    {
+      id: 4,
+      src: "/7.png",
+      alt: "Journey image 4",
+      description: "Global business connections"
+    }
   ];
 
   return (
@@ -99,6 +115,21 @@ const Journey = () => {
           </div>
         </motion.div>
         
+        {/* New Image 6.png */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.35 }}
+          viewport={{ once: true }}
+          className="break-inside-avoid mb-8"
+        >
+          <img
+            src={images[2].src}
+            alt={images[2].alt}
+            className="w-full h-full object-cover rounded-lg shadow-md transform transition-transform duration-700 hover:scale-105"
+          />
+        </motion.div>
+        
         {/* International Connections Card */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -112,6 +143,21 @@ const Journey = () => {
             <h3 className="text-xl font-playfair font-semibold mb-4 text-violet-deep">{t('connections.title')}</h3>
             <p className="font-lora text-violet-bright/80 leading-relaxed tracking-wide">{t('connections.content')}</p>
           </div>
+        </motion.div>
+        
+        {/* New Image 7.png */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.45 }}
+          viewport={{ once: true }}
+          className="break-inside-avoid mb-8"
+        >
+          <img
+            src={images[3].src}
+            alt={images[3].alt}
+            className="w-full h-full object-cover rounded-lg shadow-md transform transition-transform duration-700 hover:scale-105"
+          />
         </motion.div>
         
         {/* Real Estate Consultant Card */}
